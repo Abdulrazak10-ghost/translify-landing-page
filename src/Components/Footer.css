@@ -1,0 +1,224 @@
+/* ===== Footer Container ===== */
+.footer {
+  background-color: rgb(28, 121, 158);
+  color: #fff;
+  padding: 3rem 2rem 1rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  color: #00d9ff;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* ===== Logo Section ===== */
+.footer-logo h2 span {
+  background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowMove 8s ease infinite;
+}
+
+.footer-logo h2:hover span {
+  animation-play-state: paused;
+}
+
+@keyframes rainbowMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.footer-logo p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #eee;
+}
+
+/* ===== Links & Contact ===== */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.download-app h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.footer-links,
+.footer-contact {
+  flex: 1 1 200px;
+}
+
+.footer-contact p {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.contact-icon {
+  margin-right: 0.5rem;
+  color: #fff;
+}
+
+/* ===== Social Icons ===== */
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  color: #111;
+}
+
+.social-icons a:hover {
+  background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowMove 8s ease infinite;
+}
+
+/* ===== Download App Section ===== */
+.download-app {
+  margin-top: 1.5rem;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.app-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+/* Apple Store Badge */
+.app-btn.apple {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.app-btn.apple svg {
+  font-size: 1.5rem;
+}
+
+/* Google Play Badge */
+.app-btn.playstore {
+  background-color: #fff;
+  color: #111;
+  border: 1px solid #ccc;
+  font-family: 'Roboto', sans-serif;
+}
+
+.app-btn.playstore svg {
+  font-size: 1.5rem;
+  color: #34a853;
+}
+
+.app-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+/* ===== Footer Bottom ===== */
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #ccc;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links,
+  .footer-contact,
+  .download-app {
+    flex: unset;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .app-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer-logo h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer-links h3,
+  .footer-contact h3,
+  .download-app h3 {
+    font-size: 1rem;
+  }
+
+  .footer-contact p {
+    font-size: 0.85rem;
+  }
+
+  .social-icons a {
+    width: 30px;
+    height: 30px;
+  }
+
+  .app-btn {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
